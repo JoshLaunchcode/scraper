@@ -4,43 +4,22 @@ const Path = require('path');
 const axios = require('axios');
 
 const urlData = {
-    furnitureUrls: [
-        'https://nookipedia.com/wiki/Category:New_Horizons_clothing_icons',
-        'https://nookipedia.com/wiki/Category:New_Horizons_accessory_icons',
-        'https://nookipedia.com/wiki/Category:New_Horizons_bag_icons',
-        'https://nookipedia.com/wiki/Category:New_Horizons_bottom_icons',
-        'https://nookipedia.com/wiki/Category:New_Horizons_dress-up_icons',
-        'https://nookipedia.com/wiki/Category:New_Horizons_headwear_icons',
-        'https://nookipedia.com/wiki/Category:New_Horizons_shoe_icons',
-        'https://nookipedia.com/wiki/Category:New_Horizons_sock_icons',
-        'https://nookipedia.com/wiki/Category:New_Horizons_top_icons',
-        'https://nookipedia.com/wiki/Category:New_Horizons_umbrella_icons'
-    ],
-    urlCategory: [
-        'New_Horizons_clothing_icons',
-        'New_Horizons_accessory_icons',
-        'New_Horizons_bag_icons',
-        'New_Horizons_bottom_icons',
-        'New_Horizons_dress-up_icons',
-        'New_Horizons_headwear_icons',
-        'New_Horizons_shoe_icons',
-        'New_Horizons_sock_icons',
-        'New_Horizons_top_icons',
-        'New_Horizons_umbrella_icons'
-    ],
-    normalCategoryName: [
-        'clothing',
-        'accessories',
-        'bags',
-        'bottoms',
-        'dress-up',
-        'headwear',
-        'shoes',
-        'socks',
-        'tops',
-        'umbrellas'
-    ]
+    furnitureUrls: ['https://nookipedia.com/wiki/Category:New_Horizons_clothing_icons', 'https://nookipedia.com/wiki/Category:New_Horizons_accessory_icons', 'https://nookipedia.com/wiki/Category:New_Horizons_bag_icons', 'https://nookipedia.com/wiki/Category:New_Horizons_bottom_icons', 'https://nookipedia.com/wiki/Category:New_Horizons_dress-up_icons', 'https://nookipedia.com/wiki/Category:New_Horizons_headwear_icons', 'https://nookipedia.com/wiki/Category:New_Horizons_shoe_icons', 'https://nookipedia.com/wiki/Category:New_Horizons_sock_icons', 'https://nookipedia.com/wiki/Category:New_Horizons_top_icons', 'https://nookipedia.com/wiki/Category:New_Horizons_umbrella_icons'],
+    urlCategory: ['New_Horizons_clothing_icons', 'New_Horizons_accessory_icons', 'New_Horizons_bag_icons', 'New_Horizons_bottom_icons', 'New_Horizons_dress-up_icons', 'New_Horizons_headwear_icons', 'New_Horizons_shoe_icons', 'New_Horizons_sock_icons', 'New_Horizons_top_icons', 'New_Horizons_umbrella_icons'],
+    normalCategoryName: ['clothing', 'accessories', 'bags', 'bottoms', 'dress-up', 'headwear', 'shoes', 'socks', 'tops', 'umbrellas']
 }
+
+// const urlData = {
+//     furnitureUrls: [
+
+//     ],
+//     urlCategory: [
+
+//     ],
+//     normalCategoryName: [
+
+//     ]
+// }
 
 async function getForum(url, category, categoryName) {
     try {
